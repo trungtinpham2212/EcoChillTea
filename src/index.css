@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap&subset=vietnamese');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans', system-ui, -apple-system, 'Segoe UI', Arial, 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fefdfb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes coffee-fall {
+  0% {
+    transform: translateY(-120%) rotate(0deg);
+  }
+  70% {
+    transform: translateY(100vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+  }
+}
+
+.animate-coffee-fall {
+  animation-name: coffee-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
