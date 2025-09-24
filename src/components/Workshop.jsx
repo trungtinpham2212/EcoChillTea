@@ -28,7 +28,7 @@ const Workshop = () => {
     {
       time: "13:45 - 14:00",
       activity: "Nghỉ giải lao",
-      description: "Thưởng thức trà và bánh ngọt"
+      description: "Thưởng thức trà"
     },
     {
       time: "14:00 - 14:45",
