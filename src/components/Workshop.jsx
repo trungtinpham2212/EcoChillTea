@@ -128,7 +128,6 @@ const Workshop = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={handleRegister}
               disabled={isRegistering}
               href="#contact"
               className="mt-2 w-full text-center bg-coffee-600 text-white py-4 rounded-2xl text-lg font-semibold hover:bg-coffee-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"

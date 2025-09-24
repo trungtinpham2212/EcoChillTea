@@ -5,8 +5,11 @@ import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showToast, setShowToast] = React.useState(false);
+  const [email, setEmail] = React.useState('');
+  const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleSubscribeClick = () => {
+    if (!emailIsValid) return;
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   };
@@ -141,12 +144,18 @@ const Footer = () => {
                 type="email"
                 placeholder="Nhập email của bạn"
                 className="flex-1 px-4 py-3 rounded-xl text-coffee-800 focus:outline-none focus:ring-2 focus:ring-beige-400"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                title="Vui lòng nhập email hợp lệ (ví dụ: name@example.com)"
+                required
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleSubscribeClick}
-                className="bg-beige-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-beige-500 transition-colors duration-300"
+                disabled={!emailIsValid}
+                className={`${!emailIsValid ? 'bg-beige-300 cursor-not-allowed' : 'bg-beige-600 hover:bg-beige-500'} text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-300`}
               >
                 Đăng ký
               </motion.button>
