@@ -142,6 +142,6 @@ MIT License
 
 📞 Support
 
-📧 Email: info@ecochilltea.com
+📧 Email: tt221203@gmail.com
 
 <p align="center"> <b>EcoChillTea</b> — Sustainable Coffee Peel Tea Experience 🍃 </p>
